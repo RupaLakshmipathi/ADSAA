@@ -1,0 +1,59 @@
+//DFS Traversal of a Graph with Adjacency Matrix Representation
+import java.util.Scanner;
+
+class DFS{
+	 int n;
+    	int[][] adj;
+    	boolean[] visited;
+
+    	DFS(int n) {
+        		this.n = n;
+        		adj = new int[n][n];
+        		visited = new boolean[n];
+    	}
+
+    	// Add edge
+    	void addEdge(int u, int v) {
+        		adj[u][v] = 1;
+        		adj[v][u] = 1;   // For undirected graph
+    	}
+
+    	// DFS traversal
+    	void dfs(int v) {
+        		visited[v] = true;
+        		System.out.print(v + " ");
+
+        		for (int i = 0; i < n; i++) {
+            			if (adj[v][i] == 1 && !visited[i]) {
+                				dfs(i);
+            			}
+        		}
+    	}
+
+    	public static void main(String[] args) {
+        		Scanner sc = new Scanner(System.in);
+        		
+		System.out.print("Enter number of vertices: ");
+        		int n = sc.nextInt();
+
+        		DFS graph = new DFS(n);
+
+        		System.out.print("Enter number of edges: ");
+        		int e = sc.nextInt();
+
+        		System.out.println("Enter edges (u v):");
+        		for (int i = 0; i < e; i++) {
+            			int u = sc.nextInt();
+            			int v = sc.nextInt();
+            			graph.addEdge(u, v);
+        		}
+
+        		System.out.print("Enter starting vertex: ");
+        		int start = sc.nextInt();
+
+        		System.out.println("Depth First Traversal:");
+        		graph.dfs(start);
+
+        		sc.close();
+    	}
+}
