@@ -2,7 +2,7 @@
 import java.util.*;
 
 public class BFT{
-	private int n; //number of vertices
+	private int n; 
     	private int[][] adjMatrix;
 
      	BFT(int n){
@@ -10,13 +10,13 @@ public class BFT{
         		adjMatrix = new int[n][n];
     	}
 
-    	// Add edge (undirected graph)
+    	
     	void addEdge(int u, int v) {
         		adjMatrix[u][v] = 1;
         		adjMatrix[v][u] = 1;
     	}
 
-    	// Breadth First Traversal
+   
     	void bft(int startVertex) {
         		boolean[] visited = new boolean[n];
         		Queue<Integer> queue = new LinkedList<>();
