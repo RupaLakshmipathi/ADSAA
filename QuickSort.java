@@ -2,7 +2,7 @@
 class QuickSort {
 	static int[] a;
 	static int partition(int low, int high) {
-        		int pivot = a[low];   // first element as pivot
+        		int pivot = a[low]; 
         		int i = low + 1;
         		int j = high;
 
@@ -18,14 +18,14 @@ class QuickSort {
             			}
         		}
 
-        		// place pivot in correct position
+        		
         		a[low] = a[j];
         		a[j] = pivot;
 
         		return j;
     	}
 
-   	// Quick sort function
+  
     	static void quickSort(int low, int high) {
         		if (low < high) {
             			int j = partition(low, high);
@@ -34,7 +34,7 @@ class QuickSort {
         		}
     	}
 
-    	// Main method
+    
     	public static void main(String[] args) {
         		a = new int[] { 1, 9, 8, 7, 6, 5 };
 
