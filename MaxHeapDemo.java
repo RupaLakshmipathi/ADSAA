@@ -7,7 +7,7 @@ class MaxHeap {
 	
 	public MaxHeap(int capacity) {
 		this.capacity = capacity;
-        		a = new int[capacity + 1];  // 1-based indexing
+        		a = new int[capacity + 1];  
         		size = 0;
     	}
 
