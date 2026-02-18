@@ -12,13 +12,13 @@ class DFS{
         		visited = new boolean[n];
     	}
 
-    	// Add edge
+    	
     	void addEdge(int u, int v) {
         		adj[u][v] = 1;
-        		adj[v][u] = 1;   // For undirected graph
+        		adj[v][u] = 1;   
     	}
 
-    	// DFS traversal
+    	
     	void dfs(int v) {
         		visited[v] = true;
         		System.out.print(v + " ");
