@@ -1,4 +1,4 @@
-//implementation of Dijkstra Algorithm using java program
+//implementation of Dijkstra Algorithm using greedy method when graph is represented by adjacency matrix
 import java.util.Scanner;
 public class DijkstraAlgorithm{
 	static final int INF = 9999;
